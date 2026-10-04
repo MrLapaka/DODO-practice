@@ -1,0 +1,40 @@
+.mainBg {
+  display: flex;
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+}
+.catalogGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin: auto;
+}
+.pizzaCard {
+  border: 2px solid #000;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 20px 60px 20px;
+}
+.pizzaImg {
+  width: 100%;
+  object-fit: contain;
+}
+.pizzaName {
+  font-size: 50px;
+}
+.pizzaBtn {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid #000;
+  font-size: 32px;
+  margin-bottom: auto;
+  background-color: aqua;
+  transition: 0.35s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: bisque;
+  }
+}
