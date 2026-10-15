@@ -3,12 +3,36 @@
   width: 80%;
   height: 100vh;
   margin: auto;
+  @media (max-width: 1024px) {
+    display: block;
+    width: 90%;
+  }
+  @media (max-width: 768px) {
+    display: block;
+    width: 95%;
+  }
+  @media (max-width: 480px) {
+    display: block;
+    width: 95%;
+  }
 }
 .catalogGrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   margin: auto;
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
 }
 .pizzaCard {
   border: 2px solid #000;
@@ -17,6 +41,22 @@
   align-items: center;
   flex-direction: column;
   padding: 20px 20px 60px 20px;
+
+  @media (max-width: 1024px) {
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 20px 20px 60px 20px;
+  }
+  @media (max-width: 768px) {
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 20px 20px 60px 20px;
+  }
+  @media (max-width: 480px) {
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 20px 20px 60px 20px;
+  }
 }
 .pizzaImg {
   width: 100%;
@@ -24,6 +64,16 @@
 }
 .pizzaName {
   font-size: 50px;
+  text-align: center;
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
 }
 .pizzaBtn {
   padding: 10px 20px;
@@ -37,4 +87,33 @@
   &:hover {
     background-color: bisque;
   }
+
+  @media (max-width: 1024px) {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid #000;
+    font-size: 24px;
+  }
+  @media (max-width: 768px) {
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 2px solid #000;
+    font-size: 16px;
+  }
+  @media (max-width: 480px) {
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 2px solid #000;
+    font-size: 16px;
+  }
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countBtn {
+  width: 25px;
 }

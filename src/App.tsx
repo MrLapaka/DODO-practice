@@ -1,8 +1,11 @@
 import "./App.css";
-import Catalog from "./components/catalog/Catalog";
+import Cart from "./components/cart/cart";
+import Catalog from "./components/catalog/catalog";
+import { Routes, Route } from "react-router-dom";
 
 export const App = () => (
-  <div className="App">
-    <Catalog />
-  </div>
+  <Routes>
+    <Route path="/" element={<Catalog />} />
+    <Route path="/cart" element={<Cart />} />
+  </Routes>
 );
