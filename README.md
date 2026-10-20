@@ -1,33 +1,37 @@
-# vite-template-redux
+React + TypeScript + Vite Проект веб-приложений по React и TypeScript с использованием Vite, Redux Toolkit, React Router и модулей SCSS.
 
-The official Redux + TypeScript template for [Vite](https://vite.dev/). Uses [Redux Toolkit](https://redux-toolkit.js.org/), [React Redux](https://react-redux.js.org/), [Vitest](https://vitest.dev/), and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/).
+Технологический стек React 19 — разработка пользовательского интерфейса. TypeScript 6 — статическая типизация и повышение надежности кода. Vite 8 — разработка серверов и сборка приложений. Redux Toolkit — управление глобальными состояниями приложений. React Redux — интеграция Redux с React-компонентами. React Router 7 — маршрутизация между страницами. Sass (SCSS) — описание стиля с использованием возможностей препроцессора. SCSS Modules — изоляция стильной компоненты. Витест — запуск и проведение тестов. Библиотека тестирования React — последние React-компоненты с точками зрения пользователя. @testing-library/user-event — имитация действий в тестах. oxlint — статический анализ кода. oxfmt — формирование кода.
 
-```sh
-npx tiged reduxjs/redux-templates/packages/vite-template-redux my-app
-cd my-app
-npm install
-```
+Требования перед началом работы по установке: Node.js — совместим с используемыми версиями Vite и Vitest. npm — пакет менеджеров, поставляемый с Node.js.
 
-Or try it in the browser: [Open in StackBlitz](https://stackblitz.com/github/reduxjs/redux-templates/tree/master/packages/vite-template-redux)
+Установка и запуск Клонируйте репозиторий или открывайте существующую программу-редактор проекта.
 
-The `overrides` field in `package.json` pins `rolldown` to 1.2.8 because 1.2.9 crashes on startup inside StackBlitz's WebContainer ([stackblitz/webcontainer-core#2167](https://github.com/stackblitz/webcontainer-core/issues/2167)). It has no effect in the pnpm workspace; npm applies it when the folder is installed on its own. Remove it once rolldown ships a fix.
+Установи в зависимости: установка npm
 
-## What's inside
+Запущенная разработка сервера: npm run dev
 
-- `src/app/store.ts` - the Redux store, set up with `combineSlices` and `configureStore`, plus a `makeStore` factory and the `RootState` / `AppDispatch` types
-- `src/app/hooks.ts` - pre-typed `useAppSelector` and `useAppDispatch`
-- `src/features/counter` - a `createSlice` example with a thunk, plus tests
-- `src/features/quotes` - an RTK Query API slice fetching from a public API
-- `src/utils/test-utils.tsx` - a `renderWithProviders` helper for testing components that use the store
+После запуска Vite вы ведете локальный URL-адрес приложения в терминале.
 
-Linting and formatting use [oxlint](https://oxc.rs/docs/guide/usage/linter) and [oxfmt](https://oxc.rs/docs/guide/usage/formatter).
+Доступные команды npm run dev Запуск разработки сервера npm run start Альтернативная команда сервера разработка npm run build Проверка TypeScript и сборка приложений npm run просмотр Локальный просмотр Production-Сборки npm run test Выпуск Vitest в интерактивном режиме npm run test:run Однократный запуск тестов npm run type-check Проверка типов TypeScript без файлов npm run lint Проверка кода с помощью Oxlint npm run lint:fix Автоматическое изменение предлагаемых линтером задач npm run format Форматирование файлов с помощью Oxfmt npm run format:check Проверка форматирования без изменений Структура файлов Основные каталоги и файлы:
 
-## Scripts
+src/ — исходный код приложения. src/store/store.ts — настройка Redux Store. package.json — зависит от проекта и доступных npm-команд. Остальная структура Определяет текущую организацию исходного кода приложения.
 
-- `dev` / `start` - start the dev server
-- `build` - build for production
-- `preview` - preview the production build locally
-- `test` - run the tests once
-- `lint` / `lint:fix` - lint with oxlint
-- `format` / `format:check` - format with oxfmt
-- `type-check` - run the TypeScript compiler without emitting
+Управление состоянием Для управления глобальными состояниями используется Redux Toolkit, а для подключения Redux к React — React Redux.
+
+Хранилище конфигурации находится в src/store/store.ts.
+
+Стилизация Для стилизации использовались модули Sass и SCSS.
+
+Модули SCSS позволяют ограничить область действия CSS-классов отдельными компонентами и снизить вероятность возникновения проблем.
+
+Маршрутизация Для организации маршрутов используется React Router.
+
+Маршруты и навигация в соответствии с архитектурными приложениями.
+
+Тестирование Для запуска тестов используется Vitest, а для тестирования React-компонентов — React Testing Library.
+
+Запуск Vitest в интерактивном режиме: npm run test
+
+Для имитации действий пользователя в тестах доступна @testing-library/user-event.
+
+Примечания Основной язык приложения — TypeScript. Для новых компонентов рекомендуется использовать модули SCSS, если компоненту нужны собственные стили. Для испытаний используется Витест. Наличие Jest в зависимостях само по себе не означает, что тесты проводятся через Jest. Конкретные правила организации компонентов, страниц, хуков и Redux-слайсов промышленной фактической структурой проекта.
